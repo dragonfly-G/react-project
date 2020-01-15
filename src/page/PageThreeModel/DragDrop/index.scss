@@ -1,0 +1,41 @@
+.DragDrop{
+  ul{
+    list-style: none;
+    border: 1px solid #eeeeee;
+    display: flex;
+    flex-wrap: wrap;
+    P{
+      margin:0;
+      line-height: 40px;
+    }
+    li{
+      width: 40px;
+      margin: 10px;
+    }
+  }
+
+}
+
+.item-li{
+  div{
+    cursor: move;
+  }
+}
+.item-shadow{
+  border: 1px dashed #666666;
+  color: #666666;
+  div{
+    background: #fff;
+    border: 0;
+    color: #666666;
+    width: 100%;
+  }
+}
+.chosen{
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
+
+}
+.sortable-drag{
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
+
+}

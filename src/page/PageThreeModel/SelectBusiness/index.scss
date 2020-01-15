@@ -1,0 +1,19 @@
+.page-one .top-select{
+  margin-bottom: 30px;
+}
+.page-one ul{
+  display: flex;
+  height:30px;
+  padding: 0 20px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  list-style:none;
+}
+.page-one ul li {
+
+  flex: 1;
+}
+.page-one .title{
+  background: #eee;
+}

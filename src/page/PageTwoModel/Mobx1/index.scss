@@ -1,0 +1,24 @@
+.mobx-wrapper{
+  h2{
+    margin-bottom: 20px;
+  }
+  div{
+    margin-bottom: 10px;
+    input{
+       width: 250px;
+    }
+    span{
+      display: block;
+    }
+  }
+  .results{
+    display: flex;
+    p:nth-child(1){
+      width:60px;
+      font-weight: bold;
+    }
+    p:nth-child(2){
+      width:300px;
+    }
+  }
+}
