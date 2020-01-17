@@ -6,6 +6,7 @@ import DragDrop from "../PageThreeModel/DragDrop";   // 拖动
 import SkideBlock from "../PageThreeModel/SkideBlock";   // 滑动
 import IrrelevantComponent from '../PageThreeModel/IrrelevantComponent';
 import OnRefCommunication from '../PageThreeModel/OnRefCommunication';
+import Calendar from '../PageThreeModel/Calendar';   // 日历
 
 const { Content, Sider } = Layout;
 
@@ -46,6 +47,11 @@ class PageThree extends React.Component {
                   <span><Icon type="table" />组件间通信之onRef</span>
                 </NavLink>
               </Menu.Item>
+              <Menu.Item key="6">
+                <NavLink to='/PageThree/Calendar'>
+                  <span><Icon type="calendar" />日历组件</span>
+                </NavLink>
+              </Menu.Item>
             </Menu>
           </Sider>
           <Layout style={{ padding: '0 24px 24px' }}>
@@ -64,6 +70,7 @@ class PageThree extends React.Component {
                 <Route exact path="/PageThree/SkideBlock" component={SkideBlock}/>
                 <Route exact path="/PageThree/IrrelevantComponent" component={IrrelevantComponent}/>
                 <Route exact path="/PageThree/OnRefCommunication" component={OnRefCommunication}/>
+                <Route exact path="/PageThree/Calendar" component={Calendar}/>
               </Switch>
             </Content>
           </Layout>

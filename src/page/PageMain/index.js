@@ -4,8 +4,6 @@ import Header from '../../components/Header';
 
 import './index.scss';
 
-
-
 class PageMain extends React.Component {
   state = {
 

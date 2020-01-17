@@ -8,6 +8,13 @@ import TestThree from "../PageOneModel/TestThree";
 const { Content, Sider } = Layout;
 
 class PageOne extends React.Component {
+  state = {
+    pageOneList: [
+      {id: 1, name: 'React新生命周期', icon: 'hourglass', page: '/PageOne/TestOne'},
+      {id: 2, name: '测试2', icon: 'laptop', page: '/PageOne/TestTwo'},
+      {id: 3, name: '测试3', icon: 'notification', page: '/PageOne/TestThree'},
+    ]
+  }
   render() {
     return (
       <Layout>
@@ -18,21 +25,15 @@ class PageOne extends React.Component {
             defaultOpenKeys={['sub1']}
             style={{ height: '100%', borderRight: 0 }}
           >
-            <Menu.Item key="1">
-              <NavLink to='/PageOne/TestOne'>
-                <span><Icon type="user" />测试1</span>
-              </NavLink>
-            </Menu.Item>
-            <Menu.Item key="2">
-              <NavLink to='/PageOne/TestTwo'>
-                <span><Icon type="laptop" />测试2</span>
-              </NavLink>
-            </Menu.Item>
-            <Menu.Item key="3">
-              <NavLink to='/PageOne/TestThree'>
-                <span><Icon type="notification" />测试3</span>
-              </NavLink>
-            </Menu.Item>
+            {
+              this.state.pageOneList.map(item => (
+                <Menu.Item key={item.id}>
+                  <NavLink to={item.page}>
+                    <span><Icon type={item.icon} />{item.name}</span>
+                  </NavLink>
+                </Menu.Item>
+              ))
+            }
           </Menu>
         </Sider>
         <Layout style={{ padding: '0 24px 24px' }}>

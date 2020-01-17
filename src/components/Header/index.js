@@ -6,7 +6,12 @@ const { Header } = Layout;
 
 class Index extends Component {
   state = {
-    curModel: ['1']
+    curModel: ['1'],
+    headerList: [
+      {id: 1, name: '功能样式', page: '/PageOne', icon: 'inbox'},
+      {id: 2, name: '插件模块', page: '/PageTwo', icon: 'import'},
+      {id: 3, name: '组件模块', page: '/PageThree', icon: 'scan'},
+    ]
   };
   render() {
     return (
@@ -18,26 +23,19 @@ class Index extends Component {
           defaultSelectedKeys={this.state.curModel}
           style={{ lineHeight: '64px' }}
         >
-          <Menu.Item key="1">
-            <NavLink exact to="/PageOne">
-              <Icon type="user" />
-              <span>xx模块</span>
-            </NavLink>
-          </Menu.Item>
+          {
+            this.state.headerList.map(item => {
+              return (
+                <Menu.Item key={item.id}>
+                  <NavLink exact to={item.page}>
+                    <Icon type={item.icon} />
+                    <span>{item.name}</span>
+                  </NavLink>
+                </Menu.Item>
+              )
+            })
+          }
 
-          <Menu.Item key="2">
-            <NavLink to="/PageTwo">
-              <Icon type="video-camera" />
-              <span>插件模块</span>
-            </NavLink>
-          </Menu.Item>
-
-          <Menu.Item key="3">
-            <NavLink to="/PageThree">
-              <Icon type="upload" />
-              <span>组件模块</span>
-            </NavLink>
-          </Menu.Item>
         </Menu>
       </Header>
     );

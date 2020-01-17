@@ -1,0 +1,61 @@
+.life_cycle_title{
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+    h1{
+        margin: 0;
+        font-size: 20px;
+        .title_icon{
+            font-size: 16px;
+            vertical-align: baseline;
+            margin-right: 10px;
+        }
+    }
+}
+.life_cycle_view{
+    margin-top: 15px;
+    .father_btn{
+        display: flex;
+        h2{
+            flex-basis: 40%;
+        }
+    }
+}
+.life_cycle_test{
+    .props_value{
+        h2{
+            margin: 5px 0;
+        }
+    }
+    .life_cycle_introduce{
+        border-top: 1px solid #e0e0e0;
+        padding-top: 10px;
+        h2{
+            color: red;
+            margin-bottom: 20px;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+        h3{
+            width: 220px;
+            background: #eeeeee;
+            font-weight: bold;
+            text-align: center;
+            line-height: 30px;
+        }
+        p{
+            line-height: 30px;
+            text-indent: 2em;
+            font-size: 15px;
+            strong{
+                color: red;
+            }
+            &.bold{
+                font-weight: bold;
+            }
+        }
+        .desc{
+            background: #FAFAFA;
+            margin: 10px 0;
+        }
+    }
+}
