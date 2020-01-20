@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import emitter from '../../../util/events';
+import emitter from 'util/events';
 
 class List1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      message: 'List111111',
+      message: '这是组件List1:11111111',
     };
   }
   componentDidMount() {
@@ -15,16 +15,14 @@ class List1 extends Component {
         message,
       });
     });
-
   }
   componentWillUnmount() {
-
     // emitter.removeListener(this.eventEmitter);
   }
   render() {
     return (
       <div>
-        {this.state.message}
+        <h2>结果：{this.state.message}</h2>
       </div>
     );
   }

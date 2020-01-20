@@ -1,0 +1,17 @@
+.ballBox{
+    background: black;
+    padding: 30px 0;
+    .balls{
+        position: relative;
+        width:720px;
+        height: 420px;
+        border:10px solid yellow;
+        margin: 0 auto;
+        color: #fff;
+    }
+    p{
+        position: absolute;
+        border-radius:50%;
+        background:#fff;
+   }
+}

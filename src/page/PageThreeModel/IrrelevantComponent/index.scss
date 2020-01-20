@@ -1,0 +1,25 @@
+.irrelevantComponent{
+    .list_comp{
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 20px;
+        
+    }
+    .desc{
+        h2{
+            color: red;
+            margin-bottom: 20px;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+        p{
+            line-height: 30px;
+            text-indent: 2em;
+            font-size: 15px;
+            span{
+                color: red;
+            }
+        }
+    }
+   
+}

@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
-import emitter from '../../../util/events';
+import React, { Component } from 'react';
+import { Button } from 'antd';
+import emitter from 'util/events';
 
 class List2 extends Component {
   handleClick = (message) => {
@@ -8,7 +9,7 @@ class List2 extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.handleClick.bind(this, 'List222222')}>点击我改变List1组件中显示信息</button>
+        <Button type="primary" onClick={this.handleClick.bind(this, '这是组件List2:222222')}>点击我改变List1组件中显示信息</Button>
       </div>
     );
   }
