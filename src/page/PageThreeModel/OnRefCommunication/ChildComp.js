@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { Button } from 'antd';
 
 class ChildComp extends Component {
   constructor(props) {
@@ -14,12 +15,14 @@ class ChildComp extends Component {
   }
 
   handleChildClick=()=>{
-    this.setState({info:'通过父组件按钮获取到子组件信息啦啦啦'})
+    this.setState({
+      info: '通过父组件按钮获取到子组件信息啦啦啦'
+    })
   };
 
   render(){
     return (
-      <button onClick={this.handleChildClick}>子组件按钮</button>
+      <Button className='child_comp' type="primary" onClick={this.handleChildClick}>子组件按钮</Button>
     )
   }
 }
